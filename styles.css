@@ -1,0 +1,195 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f0f0f;
+    color: #fff;
+    text-align: center;
+}
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background-color: #161616;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.hogstext {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    margin-right: auto;
+    padding-inline: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding-right: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: #5b3ce7;
+}
+
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url('images/hero-bg.png') no-repeat center center/cover;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 30px;
+    text-shadow:     
+    1px 1px 2px black,
+    0 0 0em blue,
+    0 0 0.2em blue;
+    box-shadow: 0 0 200px rgba(19, 27, 88, 0.8);
+}
+.hero-content {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    filter: blur(10px);
+    transition: opacity 1s ease-out, transform 1s ease-out, filter 1s ease-out;
+}
+
+.fade-in._active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+.fade-in, .feature {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    filter: blur(10px);
+    transition: opacity 1s ease-out, transform 1s ease-out, filter 1s ease-out;
+}
+
+/* Когда добавляется класс _active – элемент плавно появляется */
+.fade-in._active, .feature._active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: #18095c;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #002a8f;
+    box-shadow: 0 0 0em blue;
+}
+
+.features, .download, .faq, .contact {
+    padding: 60px 20px;
+}
+.contact {
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+.download {
+    text-align: center; /* Центрируем содержимое */
+    padding: 50px 0;
+    border: 3px solid #131b58;
+    box-shadow: 0 0 50px rgba(19, 27, 88, 0.8);
+    margin-bottom: 100px;
+}
+
+/* Стили самой кнопки */
+.download a {
+    display: inline-block;
+    background-color: #131b58; /* Темно-синий фон */
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.4s ease-in-out;
+    
+    /* Свечение кнопки */
+    box-shadow: 0 0 50px rgba(19, 27, 88, 0.8);
+    
+}
+
+/* Анимация свечения при наведении */
+.download a:hover {
+    background-color: #0d1445; /* Темнее при наведении */
+    
+    /* Усиливаем свечение */
+    box-shadow: 0 0 40px rgba(19, 27, 88, 1), 
+                0 0 80px rgba(19, 27, 88, 0.8);
+    
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+}
+
+.feature-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+footer {
+    background: #111;
+    padding: 20px;
+}
+.feature-img {
+    width: 100px;
+}
+.faq-item {
+    padding: 20px;
+}
+.faq {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    border: 3px solid #131b58;
+    box-shadow: 0 0 50px rgba(19, 27, 88, 0.8);
+}
