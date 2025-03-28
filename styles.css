@@ -248,6 +248,7 @@ footer {
     background-color: hsl(226, 61%, 12%);
     margin-inline: 20%;
     border-radius: 10px;
+    min-width: 500px;
 }
 
 .card {
