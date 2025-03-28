@@ -240,7 +240,7 @@ footer {
     border: 3px solid transparent; /* Начальная обводка прозрачная */
     padding: 5px; /* Отступы внутри рамки */
     transition: border-color 0.3s ease, transform 0.3s ease; /* Плавная анимация для рамки */
-    filter: hue-rotate(200deg) brightness(0.7) saturate(2);
+    filter: brightness(0) invert(1);
 }
 
 .faq {
@@ -262,12 +262,14 @@ footer {
     font-weight: 600;
     color: #1a90ff;
 }
+
 .tytle {
     align-items: center;
     display: flex;
     gap: 20px;
     justify-content: center;
 }
+
 .line {
     height: auto;
     background-color: grey;
