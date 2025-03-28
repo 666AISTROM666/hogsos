@@ -150,6 +150,22 @@ nav a:hover {
     box-shadow: 0 0 0em blue;
 }
 
+.btnbottom {
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: #18095c;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 2s; /* анимация появления кнопки скорость*/
+}
+
+.btnbottom:hover {
+    background-color: #002a8f;
+    box-shadow: 0 0 0em blue;
+}
+
 .features, .download, .faq, .contact {
     padding: 60px 20px;
 }
@@ -224,6 +240,7 @@ footer {
     border: 3px solid transparent; /* Начальная обводка прозрачная */
     padding: 5px; /* Отступы внутри рамки */
     transition: border-color 0.3s ease, transform 0.3s ease; /* Плавная анимация для рамки */
+    filter: hue-rotate(200deg) brightness(0.7) saturate(2);
 }
 
 .faq {
@@ -255,4 +272,3 @@ footer {
     background-color: grey;
     width: 2px;
 }
-/* Бас бас */
