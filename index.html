@@ -55,12 +55,37 @@
         </div>
     </section>
 <section class="dwfq">
-    <section id="download" class="download">
-        <img src="images/1.png" style="width: 100px">
-        <h2>Скачать Hogs OS</h2>
-        <p style="margin-bottom: 30px;">Начните работу с последней версией прямо сейчас.</p>
-        <a href="https://github.com/666AISTROM666/hogsos/raw/main/HogsOS.zip" class="btn">Скачать сейчас</a>
-    </section>
+<section id="download" class="download">
+    <img src="images/1.png" style="width: 100px">
+    <h2>Скачать Hogs OS</h2>
+    <p style="margin-bottom: 30px;">Начните работу с последней версией прямо сейчас.</p>
+    <h3 style="margin-bottom: 30px;">Поддержка Windows 10-11</h3>
+    <a class="btnaccept" id="openModal">Скачать сейчас</a>
+</section>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <h2>Подтвердите загрузку</h2>
+        <p>Вы собираетесь скачать <b>Hogs OS</b>. Нажмите "Скачать сейчас", чтобы продолжить.</p>
+
+        <div class="checkbox-container">
+            <label>
+                <input type="checkbox" id="checkbox1">
+                Я уже получил <a href='https://discord.gg/dgk5RzHPFx' target="_blank">пароль</a> от архива.
+            </label>
+            <label>
+                <input type="checkbox" id="checkbox2">
+                Я уже прочитал гайд на установку.
+            </label>
+        </div>
+
+        <div class="modal-buttons">
+            <button class="btnaccept" id="confirmDownload">Скачать сейчас</button>
+            <button id="closeModal" class="close-btn">Закрыть</button>
+        </div>
+    </div>
+</div>
+
     
 <section class="faq" id="faq">
     <div class="card">
