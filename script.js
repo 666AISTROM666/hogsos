@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Плавный скролл при клике на ссылки меню (центрирование секции)
-    document.querySelectorAll("nav a").forEach(anchor => {
+    document.querySelectorAll("nav a, .btn").forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
             const targetId = this.getAttribute("href").substring(1);
@@ -32,4 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".fade-in, .feature").forEach(element => {
         observer.observe(element);
     });
+    document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', function() {
+        window.location.href = 'https://github.com/666AISTROM666/hogsos/raw/main/HogsOS.zip';
+    });
+});
+
 });
