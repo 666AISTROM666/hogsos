@@ -275,3 +275,105 @@ footer {
     background-color: grey;
     width: 2px;
 }
+
+/* Стили модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Затемнённый фон */
+    backdrop-filter: blur(5px); /* Эффект размытия */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: #0f0f0f;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal h2 {
+    margin-top: 0;
+    color: #fff;
+    font-size: 24px;
+}
+
+.modal p {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.checkbox-container {
+    text-align: left;
+    margin: 25px 0;
+}
+
+.checkbox-container label {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.checkbox-container a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btnaccept, .close-btn {
+    background-color: #131b58;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.close-btn {
+    background-color: #992b23;
+}
+
+.btnaccept:hover {
+    background-color: #221f7d;
+}
+
+.close-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.disabled {
+    background-color: #555;   /* Серый цвет */
+    cursor: not-allowed;      /* Курсор "запрещено" */
+    opacity: 0.5;             /* Затемнённый вид */
+}
