@@ -1,7 +1,7 @@
 /* Общие стили */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: #0f0f0f;
     color: #fff;
     text-align: center;
@@ -55,24 +55,55 @@ nav a:hover {
 }
 
 .hero {
-    height: 80vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: url('images/hero-bg.png') no-repeat center center/cover;
     padding: 20px;
     font-weight: 600;
     font-size: 30px;
     text-shadow:     
-    1px 1px 2px black,
-    0 0 0em blue,
-    0 0 0.2em blue;
-    box-shadow: 0 0 200px rgba(19, 27, 88, 0.8);
+        1px 1px 2px black,
+        0 0 0em blue,
+        0 0 0.2em blue;
+    position: relative; /* Нужно для ::after */
+    padding-bottom: 350px;
 }
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Видео растягивается, чтобы покрыть всю секцию */
+    z-index: -1; /* Видео будет фоном */
+}
+
+
+.hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 250px; /* Высота затемнения */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #0f0f0f);
+    pointer-events: none; /* Чтобы не мешал кликам */
+}
+
+
 .hero-content {
     text-align: center;
     padding: 100px 20px;
+    margin-top: 800px;
+}
+
+.arrow {
+    font-size: 50px;
+    transition: 2s;
+    margin-top: 15px;
 }
 
 .fade-in {
@@ -111,7 +142,7 @@ nav a:hover {
     font-size: 24px;
     border-radius: 5px;
     text-decoration: none;
-    transition: 0.3s;
+    transition: 2s; /* анимация появления кнопки скорость*/
 }
 
 .btn:hover {
@@ -129,9 +160,12 @@ nav a:hover {
 .download {
     text-align: center; /* Центрируем содержимое */
     padding: 50px 0;
-    border: 3px solid #131b58;
+}
+
+.dwfq {
     box-shadow: 0 0 50px rgba(19, 27, 88, 0.8);
     margin-bottom: 100px;
+    border: 2px solid #131b58;
 }
 
 /* Стили самой кнопки */
@@ -175,21 +209,49 @@ nav a:hover {
     border-radius: 10px;
     width: 300px;
     text-align: center;
+    border: 2px solid #131b58;
+    box-shadow: 0 0 50px rgba(19, 27, 88, 0.8);
 }
 
 footer {
     background: #111;
     padding: 20px;
 }
+
 .feature-img {
-    width: 100px;
+    width: 150px; /* Устанавливаем размер изображения */
+    height: auto;
+    border: 3px solid transparent; /* Начальная обводка прозрачная */
+    padding: 5px; /* Отступы внутри рамки */
+    transition: border-color 0.3s ease, transform 0.3s ease; /* Плавная анимация для рамки */
 }
-.faq-item {
-    padding: 20px;
-}
+
 .faq {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    border: 3px solid #131b58;
-    box-shadow: 0 0 50px rgba(19, 27, 88, 0.8);
+    display: flex;
+    background-color: hsl(226, 61%, 12%);
+    margin-inline: 20%;
+    border-radius: 10px;
+}
+
+.card {
+    font-size: 20px;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+}
+
+.results {
+    font-weight: 600;
+    color: #1a90ff;
+}
+.tytle {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.line {
+    height: auto;
+    background-color: grey;
+    width: 2px;
 }
