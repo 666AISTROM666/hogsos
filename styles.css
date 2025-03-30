@@ -7,6 +7,11 @@ body {
     text-align: center;
     cursor: url('images/cursor.png'), auto;
 }
+
+button:hover, a:hover {
+    cursor: url('images/cursor-hover.png'), auto;
+}
+
 body::-webkit-scrollbar {
     display: none; /* Chrome, Safari */
 }
