@@ -1,131 +1,668 @@
-<!DOCTYPE html>
-<html lang="en">
+                                        <!DOCTYPE html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hogs OS</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-</head>
-<body>
-    <header>
-        <div class="logo"><img src="images/1.png" style="width: 50px;"></div><h1 class="hogstext">Hogs OS</h1>
-        <nav>
-            <ul>
-                <li><a href="#features">Функции</a></li>
-                <li><a href="#download">Скачать</a></li>
-                <li><a href="instructions.html">Как установить</a></li>
-                <li><a href="#faq">Информация</a></li>
-                <li><a href="#contact">Контакт</a></li>
-            </ul>
-        </nav>
-    </header>   
-<section class="hero">
-    <video autoplay loop muted playsinline id="background-video">
-        <source src="images/bganim.mp4" type="video/mp4">
-    </video>
-    <div class="hero-content">
-        <h1 class="fade-in">Быстрая, безопасная и оптимизированная ОС</h1>
-        <p class="fade-in">Облегченная операционная система, разработанная для производительности и эффективности.</p>
-        <a href="#download" class="btn fade-in">Скачать сейчас</a>
-        <p class="arrow fade-in">⬇</p>
-    </div>
-</section>
-
-    <section id="features" class="features">
-        <h2>Почему стоит выбрать Hogs OS?</h2>
-        <div class="feature-list">
-            <div class="feature">
-                <img src="images/performance.png" alt="Performance" class="feature-img">
-                <h3>Высокая производительность</h3>
-                <p>Оптимизирован для скорости и низкого потребления ресурсов.</p>
-            </div>
-            <div class="feature">
-                <img src="images/security.png" alt="Security" class="feature-img">
-                <h3>Повышенная безопасность</h3>
-                <p>Конфиденциальность и встроенные меры безопасности.</p>
-            </div>
-            <div class="feature">
-                <img src="images/gaming.png" alt="Gaming" class="feature-img">
-                <h3>Оптимизация игры</h3>
-                <p>Улучшено для лучшего игрового процесса.</p>
-            </div>
-        </div>
-    </section>
-<section class="dwfq">
-<section id="download" class="download">
-    <img src="images/1.png" style="width: 100px">
-    <h2>Скачать Hogs OS</h2>
-    <p style="margin-bottom: 30px;">Начните работу с последней версией прямо сейчас.</p>
-    <h3 style="margin-bottom: 30px;">Поддержка Windows 10-11</h3>
-    <a class="btnaccept" id="openModal">Скачать сейчас</a>
-</section>
-
-<div id="modal" class="modal">
-    <div class="modal-content">
-        <h2>Подтвердите загрузку</h2>
-        <p>Вы собираетесь скачать <b>Hogs OS</b>. Нажмите "Скачать сейчас", чтобы продолжить.</p>
-
-        <div class="checkbox-container">
-            <label>
-                <input type="checkbox" id="checkbox1">
-                Я уже получил <a href='https://discord.gg/dgk5RzHPFx' target="_blank">пароль</a> от архива.
-            </label>
-            <label>
-                <input type="checkbox" id="checkbox2">
-                Я уже прочитал <a href='instructions.html' target="_blank">гайд</a> на установку.
-            </label>
-        </div>
-
-        <div class="modal-buttons">
-            <button class="btnaccept" id="confirmDownload">Скачать сейчас</button>
-            <button id="closeModal" class="close-btn">Закрыть</button>
-        </div>
-    </div>
-</div>
-
-    
-<section class="faq" id="faq">
-    <div class="card">
-                <h3 class="tytle"><img src="images/cpu.png" width="40px">CPU Usage</h3>
-                <p>Оптимизирован для скорости и низкого потребления ресурсов.</p>
-                <span class="results">
-                    2-10% ➜ 0%
-                </span>
-    </div>
-    <div class="line">
-
-    </div>
-    <div class="card">
-                <h3 class="tytle"><img src="images/ram.png" width="40px">RAM Usage</h3>
-                <p>Оптимизирован для скорости и низкого потребления ресурсов.</p>
-                <span class="results">
-                    2.9GB ➜ ~1.4GB
-                </span>
-    </div>
-        <div class="line">
+    <title>Hogs OS - Максимум производительности</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --grid-color: rgba(255, 255, 255, 0.03);
+        }
         
-    </div>
-    <div class="card">
-                <h3 class="tytle"><img src="images/fps.png" width="40px" class="whiteimg">0.1% FPS</h3>
-                <p>Оптимизирован для скорости и низкого потребления ресурсов.</p>
-                <span class="results">
-                    217.5 FPS ➜ 365.91 FPS
-                </span>
-    </div>
-</section>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: rgba(10, 10, 10, 0.8);
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+        
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .btn-primary {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(90deg, #fff 0%, #f3e7e9 100%);
+            outline: none;
+        }
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.15);
+            border-radius: 100%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s cubic-bezier(0.4,0,0.2,1), height 0.4s cubic-bezier(0.4,0,0.2,1);
+            z-index: 0;
+        }
+        .btn-primary:hover::after {
+            width: 250%;
+            height: 250%;
+        }
+        .btn-primary:hover {
+            transform: scale(1.06) translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+            background: linear-gradient(90deg, #ffe3e3 0%, #fff 100%);
+            filter: drop-shadow(0 0 16px #fff);
+        }
+        .btn-primary:active {
+            transform: scale(0.97) translateY(1px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+            background: linear-gradient(90deg, #ffd6d6 0%, #fff 100%);
+        }
+        .btn-primary:focus {
+            outline: none;
+            box-shadow: 0 0 0 4px #ffe3e3, 0 8px 24px rgba(0,0,0,0.25);
+        }
+        .btn-primary span {
+            position: relative;
+            z-index: 1;
+        }
+        .arrow-down {
+            display: inline-block;
+            margin-top: 140px;
+            animation: bounce 1.5s infinite;
+            cursor: pointer;
+            opacity: 0.68;
+            transition: opacity 0.3s;
+        }
+        .arrow-down:hover {
+            opacity: 1;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(12px); }
+        }
+        
+        .btn-secondary {
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .feature-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .faq-item {
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .faq-question {
+            transition: color 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            color: #d4d4d4;
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+        
+        .nav-scrolled {
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero-gradient {
+            background: radial-gradient(ellipse at center, rgba(30, 30, 30, 0.3) 0%, rgba(10, 10, 10, 0) 70%);
+        }
+    </style>
+    <style>
+        /* Чёрная полоса прокрутки для Chrome, Edge, Opera */
+        ::-webkit-scrollbar {
+            width: 12px;
+            background: #111;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #222;
+            border-radius: 8px;
+            border: 2px solid #111;
+            transition: background 0.3s;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #333;
+        }
+        /* Для Firefox */
+        html {
+            scrollbar-color: #222 #111;
+            scrollbar-width: thin;
+        }
+    </style>
+</head>
+<body class="min-h-screen relative bg-black">
+    <!-- Particles Background -->
+    <div id="particles-js" class="absolute inset-0 -z-10"></div>
     
-    <section id="contact" class="contact">
-        <h2>Связаться с нами</h2>
-        <p>Есть вопросы? Обратитесь в нашу службу поддержки.</p>
-        <a href="https://discord.gg/tcxEGtsjVy" target="_blank" class="btnbottom" style="box-shadow: 0 0 50px rgba(19, 27, 88, 0.8);">Поддержка по дискорд каналу</a>
+    <!-- Fixed Header -->
+    <header id="header" class="fixed w-full z-50 py-4 transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center">
+                <div class="text-xl font-bold tracking-tight">Hogs OS</div>
+                <div class="flex space-x-4">
+                    <a href="#features" class="text-gray-300 hover:text-white transition-colors">Возможности</a>
+                    <a href="#faq" class="text-gray-300 hover:text-white transition-colors">FAQ</a>
+                    <a href="#download" class="text-gray-300 hover:text-white transition-colors">Скачать</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center relative overflow-hidden">
+        <div class="hero-gradient absolute inset-0"></div>
+        <div class="container mx-auto px-4 py-20 text-center z-10">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 tracking-tight">Hogs OS</h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto">Максимум производительности. Ноль мусора.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button id="scroll-to-download-btn" type="button" class="btn-primary bg-white text-black font-medium py-3 px-8 rounded-lg inline-block"><span>Скачать</span></button>
+            </div>
+            <div class="flex justify-center">
+                <div class="arrow-down" id="scroll-arrow" title="К возможностям">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 8V28" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M10 20L18 28L26 20" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
     </section>
-    
-    <footer>
-        <p>&copy; 2025 Hogs OS. Все права защищены.</p>
+
+    <!-- About Section -->
+    <section id="about" class="section py-20">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-3xl font-bold mb-6 text-center">Что такое Hogs OS?</h2>
+            <div class="space-y-4 text-gray-300">
+                <p>Hogs OS — это модифицированная Windows, разработанная для энтузиастов и пользователей, которым важна скорость и эффективность.</p>
+                <p>Мы удалили всё лишнее и оптимизировали систему для максимальной производительности. Никакой телеметрии, фоновых процессов и ненужных служб — только чистая Windows в своём лучшем проявлении.</p>
+                <p>Отключены ненужные службы, удалены лишние компоненты, убрана телеметрия и фоновая активность. Результат — система, которая работает быстрее, стабильнее и потребляет меньше ресурсов.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Основные возможности</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-gray-800 bg-opacity-50 p-6 rounded-xl">
+                    <div class="text-4xl mb-4">🚀</div>
+                    <h3 class="text-xl font-semibold mb-2">Повышенная производительность</h3>
+                    <p class="text-gray-300">Оптимизированные процессы и удаление фоновых задач обеспечивают максимальную скорость работы системы.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card bg-gray-800 bg-opacity-50 p-6 rounded-xl">
+                    <div class="text-4xl mb-4">🧼</div>
+                    <h3 class="text-xl font-semibold mb-2">Без лишних компонентов</h3>
+                    <p class="text-gray-300">Удалены все ненужные приложения и службы, которые замедляют работу системы.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card bg-gray-800 bg-opacity-50 p-6 rounded-xl">
+                    <div class="text-4xl mb-4">🔒</div>
+                    <h3 class="text-xl font-semibold mb-2">Приватность и безопасность</h3>
+                    <p class="text-gray-300">Полностью отключена телеметрия и фоновые соединения с серверами Microsoft.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card bg-gray-800 bg-opacity-50 p-6 rounded-xl">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-semibold mb-2">Быстрый запуск</h3>
+                    <p class="text-gray-300">Время загрузки системы сокращено на 30-50% по сравнению со стандартной Windows.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card bg-gray-800 bg-opacity-50 p-6 rounded-xl">
+                    <div class="text-4xl mb-4">🛠️</div>
+                    <h3 class="text-xl font-semibold mb-2">Оптимизация ресурсов</h3>
+                    <p class="text-gray-300">Система потребляет меньше оперативной памяти и загружает процессор только полезными задачами.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="feature-card bg-gray-800 bg-opacity-50 p-6 rounded-xl">
+                    <div class="text-4xl mb-4">🔄</div>
+                    <h3 class="text-xl font-semibold mb-2">Стабильность работы</h3>
+                    <p class="text-gray-300">Все изменения тщательно протестированы для обеспечения максимальной стабильности системы.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section py-20">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-3xl font-bold mb-8 text-center">Часто задаваемые вопросы</h2>
+            <div class="space-y-2">
+                <!-- FAQ 1 -->
+                <div class="faq-item rounded-lg">
+                    <div class="faq-question cursor-pointer p-4 bg-gray-800 bg-opacity-50 rounded-lg">
+                        <h3 class="font-medium flex justify-between items-center">
+                            Поддерживаются ли обновления?
+                            <span class="toggle-icon">+</span>
+                        </h3>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="p-4 text-gray-300">
+                            Да, Hogs OS получает регулярные обновления безопасности и исправления ошибок. Мы тщательно тестируем каждое обновление перед выпуском, чтобы сохранить стабильность и производительность системы.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="faq-item rounded-lg">
+                    <div class="faq-question cursor-pointer p-4 bg-gray-800 bg-opacity-50 rounded-lg">
+                        <h3 class="font-medium flex justify-between items-center">
+                            Как установить Hogs OS?
+                            <span class="toggle-icon">+</span>
+                        </h3>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="p-4 text-gray-300">
+                            Процесс установки аналогичен установке стандартной Windows. Вам потребуется создать загрузочную USB-флешку с помощью нашего инструмента, загрузиться с неё и следовать инструкциям установщика. Весь процесс занимает около 15-20 минут.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="faq-item rounded-lg">
+                    <div class="faq-question cursor-pointer p-4 bg-gray-800 bg-opacity-50 rounded-lg">
+                        <h3 class="font-medium flex justify-between items-center">
+                            Чем отличается от обычной Windows?
+                            <span class="toggle-icon">+</span>
+                        </h3>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="p-4 text-gray-300">
+                            Hogs OS основана на оригинальной Windows, но с удалением всех ненужных компонентов: телеметрии, встроенных приложений, фоновых служб и других функций, которые замедляют систему. Результат — чистая, быстрая и отзывчивая ОС, сохраняющая совместимость со всеми драйверами и приложениями.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="faq-item rounded-lg">
+                    <div class="faq-question cursor-pointer p-4 bg-gray-800 bg-opacity-50 rounded-lg">
+                        <h3 class="font-medium flex justify-between items-center">
+                            Совместима ли Hogs OS с играми и приложениями?
+                            <span class="toggle-icon">+</span>
+                        </h3>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="p-4 text-gray-300">
+                            Да, Hogs OS полностью совместима со всеми приложениями и играми, которые работают на стандартной Windows. Мы сохранили все необходимые компоненты для обеспечения максимальной совместимости.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="faq-item rounded-lg">
+                    <div class="faq-question cursor-pointer p-4 bg-gray-800 bg-opacity-50 rounded-lg">
+                        <h3 class="font-medium flex justify-between items-center">
+                            Нужна ли лицензия Windows для использования Hogs OS?
+                            <span class="toggle-icon">+</span>
+                        </h3>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="p-4 text-gray-300">
+                            Да, как и для любой версии Windows, вам потребуется действующая лицензия. Hogs OS не предоставляет лицензий и не обходит систему активации Microsoft.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="section py-20 bg-black">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Готовы к максимальной производительности?</h2>
+            <p class="text-gray-300 mb-10 max-w-2xl mx-auto">Скачайте Hogs OS и ощутите разницу уже сегодня</p>
+            <button id="open-modal-btn" type="button" class="btn-primary bg-white text-black font-medium py-3 px-8 rounded-lg inline-block">Скачать Hogs OS</button>
+            <p class="text-gray-500 mt-4 text-sm">Текущая версия: 1.0.0 | Размер: 4.2 GB</p>
+        </div>
+    </section>
+
+<!-- Модальное окно для подтверждения скачивания -->
+<div id="download-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 hidden">
+    <div class="bg-gray-900 rounded-2xl shadow-2xl p-8 w-full max-w-md relative">
+      <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl leading-none">&times;</button>
+      <h3 class="text-2xl font-bold mb-6 text-center">Перед скачиванием</h3>
+      <form id="download-form" class="space-y-4">
+        <label class="flex items-center space-x-3 cursor-pointer">
+          <input type="checkbox" id="voice-checkbox" class="form-checkbox h-5 w-5 text-blue-600 rounded">
+          <span>Я сижу с основателем в войсе</span>
+        </label>
+        <label class="flex items-center space-x-3 cursor-pointer">
+          <input type="checkbox" id="key-checkbox" class="form-checkbox h-5 w-5 text-blue-600 rounded">
+          <span>Я получил ключ на Hogs OS</span>
+        </label>
+        <button id="modal-download-btn" type="button" class="btn-primary bg-white text-black font-medium py-3 px-8 rounded-lg w-full mt-4 opacity-50 cursor-not-allowed" disabled>Скачать Hogs OS</button>
+      </form>
+    </div>
+  </div>
+  
+  <script>
+    const btn = document.getElementById('modal-download-btn');
+    const cb1 = document.getElementById('voice-checkbox');
+    const cb2 = document.getElementById('key-checkbox');
+  
+    function toggleBtn() {
+      const enabled = cb1.checked && cb2.checked;
+      btn.disabled = !enabled;
+      btn.style.opacity = enabled ? '1' : '0.5';
+      btn.style.cursor = enabled ? 'pointer' : 'not-allowed';
+    }
+  
+    cb1.addEventListener('change', toggleBtn);
+    cb2.addEventListener('change', toggleBtn);
+  
+    btn.addEventListener('click', () => {
+      if (btn.disabled) return;
+  
+      const a = document.createElement('a');
+      a.href = 'https://github.com/666AISTROM666/hogsos/releases/download/Higs/HogsOS.exe';
+      a.download = 'HogsOS.exe';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    });
+  
+    toggleBtn();
+  </script>
+  
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-xl font-bold mb-2">Hogs OS</div>
+                    <p class="text-gray-500 text-sm">Сделано сообществом для сообщества</p>
+                </div>
+                
+                <div class="flex flex-col items-center md:items-end">
+                    <div class="flex space-x-4 mb-4">
+                        <a href="https://discord.gg/tcxEGtsjVy" class="text-gray-400 hover:text-white transition-colors">Discord</a>
+                    </div>
+                    <p class="text-gray-500 text-sm">© 2025 Hogs OS Project. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('nav-scrolled');
+            } else {
+                header.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Scroll animations
+        function checkScroll() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (sectionTop < windowHeight * 0.85) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+
+        // Initialize scroll check
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const icon = question.querySelector('.toggle-icon');
+                
+                if (faqItem.classList.contains('active')) {
+                    faqItem.classList.remove('active');
+                    icon.textContent = '+';
+                } else {
+                    // Close other open items
+                    document.querySelectorAll('.faq-item.active').forEach(item => {
+                        item.classList.remove('active');
+                        item.querySelector('.toggle-icon').textContent = '+';
+                    });
+                    
+                    faqItem.classList.add('active');
+                    icon.textContent = '−';
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        // Scroll to features on arrow click
+        document.getElementById('scroll-arrow').addEventListener('click', function() {
+            const features = document.getElementById('features');
+            if (features) {
+                window.scrollTo({
+                    top: features.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+        // Плавный скролл к нижней кнопке 'Скачать Hogs OS' по клику на верхнюю кнопку
+        document.getElementById('scroll-to-download-btn').addEventListener('click', function() {
+            const downloadBtn = document.getElementById('open-modal-btn');
+            if (downloadBtn) {
+                const rect = downloadBtn.getBoundingClientRect();
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                window.scrollTo({
+                    top: rect.top + scrollTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    </script>
+
+    <script>
+        // Particles.js config
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#ffffff"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.3,
+                        "random": true,
+                        "anim": {
+                            "enable": true,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#ffffff",
+                        "opacity": 0.2,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 1,
+                        "direction": "none",
+                        "random": true,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 140,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+        });
+    </script>
+
+    <script>
+        // Открытие модалки по клику на нижнюю кнопку
+        document.getElementById('open-modal-btn').addEventListener('click', function() {
+            document.getElementById('download-modal').classList.remove('hidden');
+        });
+        // Закрытие модалки
+        document.getElementById('close-modal').addEventListener('click', function() {
+            document.getElementById('download-modal').classList.add('hidden');
+        });
+        // Закрытие по клику вне окна
+        document.getElementById('download-modal').addEventListener('mousedown', function(e) {
+            if (e.target === this) {
+                this.classList.add('hidden');
+            }
+        });
+        // Логика чекбоксов и активации кнопки
+        const voiceCheckbox = document.getElementById('voice-checkbox');
+        const keyCheckbox = document.getElementById('key-checkbox');
+        const modalDownloadBtn = document.getElementById('modal-download-btn');
+        function updateModalBtn() {
+            if (voiceCheckbox.checked && keyCheckbox.checked) {
+                modalDownloadBtn.disabled = false;
+                modalDownloadBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            } else {
+                modalDownloadBtn.disabled = true;
+                modalDownloadBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            }
+        }
+        voiceCheckbox.addEventListener('change', updateModalBtn);
+        keyCheckbox.addEventListener('change', updateModalBtn);
+        // (Опционально) действие по клику на кнопку внутри модалки
+        modalDownloadBtn.addEventListener('click', function() {
+            if (!this.disabled) {
+                // Здесь можно добавить реальную ссылку на скачивание
+                window.location.href = '#download';
+                document.getElementById('download-modal').classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 </html>
